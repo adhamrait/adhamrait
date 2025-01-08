@@ -1,4 +1,6 @@
-## Hi there 👋
+## Arjun Dhamrait
+
+SciCAM Master's student at UCSC :)
 
 <!--
 **adhamrait/adhamrait** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
