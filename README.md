@@ -1,7 +1,8 @@
 ## Arjun Dhamrait
 
 Applied Math Master's student at UCSC :)
-CV/projects: adhamrait.github.io
+
+[CV/projects](adhamrait.github.io)
 <!--
 **adhamrait/adhamrait** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
