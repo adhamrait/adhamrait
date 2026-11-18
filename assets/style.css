@@ -6,6 +6,7 @@
   --bg: #fcfcfa;
   --link: #1d4f91;
   --hover: #f1f0ea;
+  --panel: rgba(252, 252, 250, 0.88);
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -16,6 +17,7 @@
     --bg: #181817;
     --link: #8db4e8;
     --hover: #22221f;
+    --panel: rgba(24, 24, 23, 0.86);
   }
 }
 
@@ -49,6 +51,30 @@ h3 {
 .dot { color: var(--rule); padding: 0 0.4em; }
 .back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.95rem; }
 .back + h3 { margin-top: 0.5rem; }
+
+/* CV page: photo background with a translucent content panel */
+body.backdrop { max-width: none; padding: 3rem 1rem 5rem; background: #3d64a8; }
+body.backdrop::before {
+  content: ""; position: fixed; inset: 0; z-index: -1;
+  background: var(--backdrop) center 70% / cover no-repeat;
+}
+.panel { max-width: 44rem; margin: 0 auto; }
+.backdrop .panel {
+  padding: 2.5rem 2.75rem 2rem;
+  background: var(--panel);
+  border-radius: 6px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.intro { display: flex; align-items: center; gap: 1.4rem; }
+.headshot { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; flex: none; }
+@media (max-width: 520px) {
+  body.backdrop { padding: 1rem 0.6rem 3rem; }
+  .backdrop .panel { padding: 1.5rem 1.1rem; }
+  .headshot { width: 80px; height: 80px; }
+  .intro { gap: 1rem; }
+}
 
 /* Entries (education, research, experience, projects, publications) */
 ul.entries { list-style: none; padding: 0; margin: 0; }

@@ -8,14 +8,22 @@
 {% include head.html %}
     <title>{{ p.name }}</title>
   </head>
-  <body>
-    <h1>{{ p.name }}</h1>
-    <div class="contact">
-      {%- for email in p.emails %}{{ email }}{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor -%}
-    </div>
-    <div>
-      {%- for link in p.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor -%}
-    </div>
+  <body{% if p.background %} class="backdrop" style="--backdrop: url('{{ '/' | append: p.background | relative_url }}')"{% endif %}>
+  <main class="panel">
+    <header class="intro">
+      {%- if p.headshot %}
+      <img class="headshot" src="{{ '/' | append: p.headshot | relative_url }}" alt="{{ p.name }}" width="112" height="112">
+      {%- endif %}
+      <div>
+        <h1>{{ p.name }}</h1>
+        <div class="contact">
+          {%- for email in p.emails %}{{ email }}{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor -%}
+        </div>
+        <div>
+          {%- for link in p.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor -%}
+        </div>
+      </div>
+    </header>
 
     <h3>Education</h3>
     <ul class="entries">
@@ -46,5 +54,6 @@
     <ul class="entries">
       {% for item in site.data.projects %}{% include entry.html item=item %}{% endfor %}
     </ul>
+  </main>
   </body>
 </html>

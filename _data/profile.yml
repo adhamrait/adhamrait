@@ -1,5 +1,7 @@
-name: Arjun Dhamrait
+name: Arjun Singh Dhamrait
 short_name: A. Dhamrait   # bolded in publication author lists
+headshot: assets/headshot.jpg      # shown top-left of the CV page (remove to hide)
+background: assets/shasta.jpg      # CV page background photo (remove for plain)
 emails:
   - adhamrai _at_ ucsc _dot_ edu
 links:
