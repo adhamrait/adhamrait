@@ -1,0 +1,35 @@
+- title: UC Santa Cruz
+  dates: September 2026 - Current
+  lines:
+    - "Advisors: Prof. Dongwook Lee, Prof. Ashesh Chattopadhyay"
+  description: >-
+    Investigated the use of deep Neural Networks in shock detection and capturing in high-order CFD solvers. Extended work to higher dimensions for high-order and efficient solver performance on both shocked and smooth stencils. PI: Dongwook Lee.
+    Investigated efficient extreme event sampling for AI models, including events absent from their training data, and researched optimization-based methods to steer them toward such rare extremes. PI: Ashesh Chattopadhyay
+
+- title: Lawrence Berkeley National Labs
+  dates: June 2025 - December 2025
+  lines:
+    - "PI: Remi Lehe"
+  description: >-
+    Investigated ML surrogate models that incorporate collective effects to replace computationally
+    intensive steps in modeling particle accelerators. Added features to a framework for real-time
+    guidance in laser-plasma experiments. Studying the scaling of backward-differentiable simulations
+    of particle accelerators in the Cheetah open source project.
+
+- title: UC Santa Cruz
+  dates: September 2024 - June 2026
+  lines:
+    - "Advisor: Prof. Dongwook Lee"
+  description: >-
+    Researched the use of Gaussian Processes for PDE solving and to update divergence-free fluxes of
+    cells in Magnetohydrodynamics simulations.
+
+- title: UC Berkeley, School of Information
+  dates: 2020 - June 2021
+  lines:
+    - "PI: Xiao Qiang"
+  description: >-
+    Assisted security research of popular proxy protocols (V2Ray/vmess, Trojan). Managed deployment
+    of client testing servers within the GFW and servers outside on Digital Ocean. Helped prepare over
+    10GB of data for analysis via Neural Net. Thoroughly investigated protocol design and
+    implementation for security flaws.

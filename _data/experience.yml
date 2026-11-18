@@ -1,0 +1,21 @@
+- title: Meta
+  dates: July 2022 - January 2023
+  lines: [Software Engineer]
+  description: >-
+    Worked as a Software Engineer on a large, cross-functional team. Implemented features on a large
+    internal react app to aid and assist sales, marketing, and business clients within Meta.
+
+- title: Apple
+  dates: June 2021 - June 2022
+  lines: [Software Engineer]
+  description: >-
+    Served as the engineering point of contact of multiple large projects related to user-level OS
+    features. Created and maintained a large cross-functional Swift utilities framework for use across
+    Apple. Implemented features and fixed bugs in complex projects written in C/C++, Obj-C, and Swift.
+
+- title: Apple
+  dates: June 2020 - August 2020
+  lines: [Software Engineer Intern]
+  description: >-
+    Migrated an existing cloud service onto Kubernetes. Created and maintained a CI/CD pipeline. Wrote
+    a server implementing a new service API and deployed for internal use.

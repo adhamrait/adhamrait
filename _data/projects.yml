@@ -1,0 +1,67 @@
+- title: Auto-Regressive Conditional Generative Model
+  description: >-
+    Implemented a generative model for multi-channel weather data using a conditional decoder. Modeled
+    weather data using a variety of techniques, models, and architectures. Small model size enabled
+    training for models accurate to 2 weeks in less than 5 minutes of training time and 30 seconds of
+    prediction time.
+  links:
+    - { label: Report, url: project_reports/AM160_Final_Project.pdf }
+    - { label: Code, url: "https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_P2.ipynb" }
+
+- title: Fortran Linear Algebra Library
+  description: >-
+    Implemented many fast linear algebra routines for matrix decomposition, singular value
+    decomposition, eigenvalue problems, and other matrix operations.
+  links:
+    - { label: Code, url: "https://github.com/adhamrait/Numerical-Linear-Algebra/" }
+
+- title: De-sparsification via Variational Auto Encoder
+  description: >-
+    Implemented a desparsification model for multi-channel weather data using a VAE. Explored different
+    models, hyperparameters, and architectures.
+  links:
+    - { label: Report, url: project_reports/AM160_Final_Project.pdf }
+    - { label: Code, url: "https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_P1.ipynb" }
+
+- title: Modeling High-Dimensional Lorenz-93
+  description: >-
+    Used neural nets to model a high dimensional Lorenz-93 system. Explored different methods of
+    iterating steps of the model. Explored various implementations of a hybrid physics + ML model when
+    modeling systems which have known physics.
+  links:
+    - { label: Report, url: project_reports/AM160_HW2_Problem1.pdf }
+    - { label: Code, url: "https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_HW2_Problem_1.ipynb" }
+
+- title: SinDY for Lorenz-63
+  description: >-
+    Used SinDY to extract the physics of the Lorenz-63 system with noisy exact derivative data and
+    computed derivative data. Compared multiple methods of computing derivative from data, including
+    finite difference methods, gaussian processes, and cubic splines.
+  links:
+    - { label: Report, url: project_reports/AM160_HW1_Problem2.pdf }
+    - { label: Code, url: "https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_HW1_Problem2.ipynb" }
+
+- title: Optimal Gaussian Process Kernel Choice
+  description: >-
+    Used gradient descent to choose the optimal kernel function for a Gaussian Process. When
+    approximating a sinusoidal function, the optimized kernel function weights obtained from maximizing
+    the log-likelihood of the Gaussian Process correctly weighed the periodic kernel function
+    considerably more than the other kernel functions. This choice of kernel function additionally
+    allowed the model to predict unseen data very accurately.
+  links:
+    - { label: Report, url: project_reports/AM229_Project_Report.pdf }
+    - { label: Code, url: "https://github.com/adhamrait/uncategorized_projects/blob/main/AM229_Final_Project.ipynb" }
+
+- title: Novel distributed large matrix inversion techniques
+  description: >-
+    Implemented multiple novel matrix inversion algorithms for large, multi-gigabyte matrices on
+    distributed computers in the python package nums. Analyzed performance characteristics of different
+    implementations on varying matrix sizes.
+  links:
+    - { label: Report, url: project_reports/CS267_Final_Project_Report.pdf }
+    - { label: Code, url: "https://github.com/adhamrait/nums" }
+
+- title: Calchart-4
+  description: A typescript webapp for charting marching band shows
+  links:
+    - { label: Code, url: "https://github.com/calband/calchart-redesign" }

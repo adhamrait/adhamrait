@@ -1,0 +1,6 @@
+# Same format as publications.yml; "status" can be a venue/date once presented.
+- authors: [A. Dhamrait, D. Lee]
+  title: Marginal log likelihood for shock capturing and kernel optimization of stenciled Gaussian processes in finite volume methods
+  status: University of California Santa Cruz, June 2026
+  links:
+    - { label: Poster, url: publications/arjun_dhamrait_thesis_poster.pdf }

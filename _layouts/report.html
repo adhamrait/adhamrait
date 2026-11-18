@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{% include head.html %}
+    <title>{{ page.title }} - Trip Report</title>
+  </head>
+  <body>
+    <a class="back" href="{{ '/climbing/' | relative_url }}">&larr; Climbing</a>
+    <h1>{{ page.title }}</h1>
+    <div class="meta">
+      {{- page.date | date: "%B %-d, %Y" -}}
+      {%- if page.route %}<span class="dot">&middot;</span>{{ page.route }}{% endif -%}
+      {%- if page.partners and page.partners.size > 0 %}<span class="dot">&middot;</span>with {{ page.partners | join: ", " }}{% endif -%}
+    </div>
+    {%- if page.distance or page.gain or page.time %}
+    <dl class="stats">
+      {%- if page.distance %}<dt>Distance</dt><dd>{{ page.distance }}</dd>{% endif -%}
+      {%- if page.gain %}<dt>Elevation gain</dt><dd>{{ page.gain }}</dd>{% endif -%}
+      {%- if page.time %}<dt>Time</dt><dd>{{ page.time }}</dd>{% endif -%}
+    </dl>
+    {%- else %}
+    <br>
+    {%- endif %}
+
+    <article>
+{{ content }}
+    </article>
+  </body>
+</html>

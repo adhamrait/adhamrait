@@ -1,0 +1,14 @@
+<li>
+  <div class="head"><b>{{ include.item.title }}</b>{% if include.item.dates %}<span class="meta">{{ include.item.dates }}</span>{% endif %}</div>
+  {%- for line in include.item.lines %}
+  <div class="sub">{{ line }}</div>
+  {%- endfor %}
+  {%- if include.item.description %}
+  <div class="desc">{{ include.item.description }}</div>
+  {%- endif %}
+  {%- if include.item.links %}
+  <div class="links">
+    {%- for link in include.item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor -%}
+  </div>
+  {%- endif %}
+</li>

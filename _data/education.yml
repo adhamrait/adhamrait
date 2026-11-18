@@ -1,0 +1,18 @@
+# Fields (all optional except title): title, dates, lines, description, links
+- title: University of California Santa Cruz
+  dates: 2026-Current
+  lines:
+    - PhD Applied Math
+    - "Research: Deep learning for shock capturing in high-order CFD solvers, sampling rare and extreme events in AI weather models"
+
+- title: University of California Santa Cruz
+  dates: 2024-2026
+  lines:
+    - MS Scientific Computing and Applied Math
+    - "Thesis: Marginal log likelihood for shock capturing and kernel optimization of stenciled Gaussian processes in finite volume methods"
+
+- title: University of California Berkeley
+  dates: 2017-2021
+  lines:
+    - BS Electrical Engineering and Computer Science
+    - adhamrait _at_ berkeley _dot_ edu

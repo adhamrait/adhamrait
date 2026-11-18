@@ -1,0 +1,13 @@
+<li>
+  <div>
+  {%- for author in include.item.authors -%}
+    {%- if author == site.data.profile.short_name %}<b>{{ author }}</b>{% else %}{{ author }}{% endif %}
+    {%- unless forloop.last %}, {% endunless -%}
+  {%- endfor %}. <i>{{ include.item.title }}</i></div>
+  <div class="meta">{{ include.item.status }}</div>
+  {%- if include.item.links %}
+  <div class="links">
+    {%- for link in include.item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor -%}
+  </div>
+  {%- endif %}
+</li>

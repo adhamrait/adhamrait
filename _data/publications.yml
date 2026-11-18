@@ -1,0 +1,11 @@
+# Your name (profile.short_name) is bolded automatically in author lists.
+- authors: [A. Dhamrait]
+  title: Marginal log likelihood for shock capturing and kernel optimization of stenciled Gaussian processes in finite volume methods
+  status: M.S. Thesis, University of California Santa Cruz, June 2026
+  links:
+    - { label: PDF, url: publications/arjun_dhamrait_thesis.pdf }
+    - { label: Presentation, url: publications/arjun_dhamrait_thesis_presentation.pdf }
+
+- authors: [A. Dhamrait, E. Zoni, A. Huebl, R. Roussel, J. Kaiser, J.-L. Vay, R. Lehe]
+  title: The memory scaling of reverse-mode differentiability in particle accelerator tracking codes with space charge
+  status: in-progress

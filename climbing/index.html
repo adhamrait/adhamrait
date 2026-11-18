@@ -1,0 +1,45 @@
+---
+# Mountain list lives in _data/mountains.yml; trip reports in _reports/ (see new_report.sh).
+# Paste the Google Sheets "Publish to web" embed URL below (leave empty to hide the stats).
+stats_embed_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuWUjmJl4EdMRIjHgHWRLZhDmeW-PXPTMdh969u6JSk3xj3_DqlCEDwtod0CWMm6GNp8Tu-0gKqCOm/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{% include head.html %}
+    <title>Climbing - {{ site.data.profile.name }}</title>
+  </head>
+  <body>
+    <a class="back" href="../">&larr; {{ site.data.profile.name }}</a>
+    <h3>Mountains</h3>
+    <table>
+      <thead><tr><th class="num">Elev. (ft)</th><th>Peak</th><th>Date</th><th class="hide-narrow">Report</th></tr></thead>
+      <tbody>
+      {%- for m in site.data.mountains %}
+      {%- assign r = site.reports | where: "peak", m.name | first %}
+      <tr>
+        <td class="num">{{ m.elevation | divided_by: 1000 }},{{ m.elevation | modulo: 1000 | prepend: "00" | slice: -3, 3 }}</td>
+        <td>{% if r %}<a href="{{ r.url | relative_url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</td>
+        <td class="meta">{{ m.date }}</td>
+        <td class="hide-narrow">{% if r %}<a href="{{ r.url | relative_url }}">Read &rarr;</a>{% endif %}</td>
+      </tr>
+      {%- endfor %}
+      </tbody>
+    </table>
+
+    {%- assign reports = site.reports | sort: "date" | reverse %}
+    {%- if reports.size > 0 %}
+    <h3>Trip Reports</h3>
+    <ul class="entries">
+      {%- for r in reports %}
+      <li><div class="head"><a href="{{ r.url | relative_url }}">{{ r.title }}</a><span class="meta">{{ r.date | date: "%B %Y" }}</span></div></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {% if page.stats_embed_url != "" -%}
+    <h3>Trad Climbing</h3>
+    <iframe src="{{ page.stats_embed_url }}" title="Climbing stats"></iframe>
+    {%- endif %}
+  </body>
+</html>

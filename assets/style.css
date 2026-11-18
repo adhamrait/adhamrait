@@ -1,0 +1,96 @@
+/* One small stylesheet for the whole site. Colors are defined once here. */
+:root {
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --rule: #dcdcd6;
+  --bg: #fcfcfa;
+  --link: #1d4f91;
+  --hover: #f1f0ea;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e4e2dc;
+    --muted: #9a978f;
+    --rule: #3a3936;
+    --bg: #181817;
+    --link: #8db4e8;
+    --hover: #22221f;
+  }
+}
+
+body {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1rem 5rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 Charter, "Iowan Old Style", Georgia, serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--link); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+h1 { font-size: 2rem; margin: 0 0 0.3rem; line-height: 1.2; }
+h3 {
+  margin: 2.6rem 0 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.meta { color: var(--muted); }
+.contact { color: var(--muted); margin-bottom: 0.4rem; }
+.dot { color: var(--rule); padding: 0 0.4em; }
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.back + h3 { margin-top: 0.5rem; }
+
+/* Entries (education, research, experience, projects, publications) */
+ul.entries { list-style: none; padding: 0; margin: 0; }
+ul.entries > li { margin-bottom: 1.4rem; }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
+.head .meta { font-variant-numeric: tabular-nums; }
+.sub { font-style: italic; }
+.desc { margin-top: 0.25rem; }
+.links { margin-top: 0.25rem; font-size: 0.95rem; }
+.links a + a { margin-left: 0.9em; }
+
+/* Climbing table */
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+th, td { padding: 0.4rem 0.6rem; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+tr + tr td { border-top: 1px solid var(--rule); }
+tbody tr:hover td { background: var(--hover); }
+.num { text-align: right; white-space: nowrap; }
+td.meta { white-space: nowrap; }
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .hide-narrow { display: none; }
+}
+
+iframe { width: 100%; height: 600px; border: 1px solid var(--rule); background: #fff; }
+
+/* Trip reports */
+.stats { display: grid; grid-template-columns: max-content 1fr; gap: 0.1rem 1rem; margin: 1rem 0 2rem; }
+.stats dt { color: var(--muted); }
+.stats dd { margin: 0; }
+article p { margin: 0 0 1.1rem; }
+article h2 { font-size: 1.25rem; margin: 2rem 0 0.6rem; }
+figure { margin: 1.8rem 0; }
+figure img { display: block; max-width: 100%; max-height: 80vh; height: auto; }
+figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; }

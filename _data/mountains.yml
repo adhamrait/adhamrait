@@ -1,0 +1,26 @@
+# Peaks climbed. elevation is in feet.
+# Trip reports in _reports/ link here automatically when their `peak` matches `name`.
+- { elevation: 14505, name: Whitney, date: October 2023 }
+- { elevation: 14410, name: Rainier, date: July 2025 }
+- { elevation: 14179, name: Shasta, date: May 2024 }
+- { elevation: 13726, name: Bear Creek Spire, date: July 2026 }
+- { elevation: 13374, name: Vagabond, date: September 2025 }
+- { elevation: 13061, name: Dana, date: June 2025 }
+- { elevation: 11526, name: Tioga, date: September 2024 }
+- { elevation: 11004, name: Gaylor, date: June 2025 }
+- { elevation: 10916, name: Cathedral, date: August 2025 }
+- { elevation: 10823, name: Unicorn, date: September 2025 }
+- { elevation: 10781, name: Baker, date: July 2023 }
+- { elevation: 10381, name: Round Top, date: June 2025 }
+- { elevation: 10153, name: The Sister, date: June 2025 }
+- { elevation: 10051, name: Spanish, date: October 2024 }
+- { elevation: 9980, name: "Dick’s", date: August 2025 }
+- { elevation: 9849, name: "Jack’s", date: August 2025 }
+- { elevation: 9739, name: Tallac, date: December 2023 }
+- { elevation: 9453, name: Lembert Dome, date: July 2026 }
+- { elevation: 9415, name: Stewart, date: August 2026 }
+- { elevation: 9040, name: Stately Pleasure Dome, date: July 2026 }
+- { elevation: 8846, name: Half Dome, date: December 2023 }
+- { elevation: 7980, name: Olympus, date: June 2026 }
+- { elevation: 6223, name: Vesper, date: August 2026 }
+- { elevation: 6045, name: Lundin, date: August 2026 }

@@ -1,0 +1,8 @@
+{%- comment -%}
+  Usage: {% include photo.html src="whitney/summit.jpg" caption="On top" %}
+  src is relative to assets/climbing/
+{%- endcomment -%}
+<figure>
+  <img src="{{ '/assets/climbing/' | append: include.src | relative_url }}" alt="{{ include.caption }}" loading="lazy">
+  {%- if include.caption and include.caption != "" %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

@@ -1,0 +1,13 @@
+# GitHub Pages builds this site with Jekyll automatically.
+# The site is served from adhamrait.github.io/adhamrait, so local preview is at
+# http://localhost:4000/adhamrait/
+baseurl: /adhamrait
+
+collections:
+  reports:                                 # trip reports live in _reports/
+    output: true
+    permalink: /climbing/reports/:name/
+
+exclude:
+  - README.md
+  - new_report.sh

@@ -1,127 +1,50 @@
-<html>
+---
+# Content lives in _data/*.yml — edit those, not this file.
+---
+{%- assign p = site.data.profile -%}
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Arjun Dhamrait</title>
+{% include head.html %}
+    <title>{{ p.name }}</title>
   </head>
-  <Body>
-    <h1>Arjun Dhamrait</h1>
-    adhamrai _at_ ucsc _dot_ edu <br \>
-    adhamrait _at_ lbnl _dot_ gov <br \>
-    <a href="https://www.github.com/adhamrait">Github</a>
+  <body>
+    <h1>{{ p.name }}</h1>
+    <div class="contact">
+      {%- for email in p.emails %}{{ email }}{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor -%}
+    </div>
+    <div>
+      {%- for link in p.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor -%}
+    </div>
+
     <h3>Education</h3>
-    <ul>
-      <li>
-        <b>University of California Santa Cruz</b> 2024-present <br \>
-        MS Scientific Computing and Applied Math<br \>
-        Thesis: Novel applications of gassian processes in computational fluid dynamics
-        adhamrai _at_ ucsc _dot_ edu
-      </li>
-      <li>
-        <b>University of California Berkeley</b> 2017-2021 <br \>
-        BS Electrical Engineering and Computer Science<br \>
-        adhamrait _at_ berkeley _dot_ edu
-      </li>
+    <ul class="entries">
+      {% for item in site.data.education %}{% include entry.html item=item %}{% endfor %}
     </ul>
 
     <h3>Research</h3>
-    <ul>
-      <li>
-        <b>Lawrence Berkeley National Labs</b> June 2025 - Current<br \>
-        PI: Remi Lehe<br \>
-        Investigated ML surrogate models that incorporate collective effects to replace computationally intensive steps in modeling particle accelerators. Added features to a framework for real-time guidance in laser-plasma experiments. Studying the scaling of backward-differentiable simulations of particle accelerators in the Cheetah open source project.
-      </li> 
-      <li>
-        <b>UC Santa Cruz</b> September 2024 - Current<br \>
-        Advisor: Prof. Dongwook Lee<br \>
-        Researched the use of Gaussian Processes for PDE solving and to update divergence-free fluxes of cells in Magnetohydrodynamics simulations.
-      </li> 
-      <li>
-        <b>UC Berkeley, School of Information</b> 2020 - June 2021<br \>
-        PI: Xiao Qiang<br \>
-        Assisted security research of popular proxy protocols (V2Ray/vmess, Trojan). Managed deployment of client testing servers within the GFW and servers outside on Digital Ocean. Helped prepare over 10GB of data for analysis via Neural Net. Thoroughly investigated protocol design and implementation for security flaws.
-      </li>
+    <ul class="entries">
+      {% for item in site.data.research %}{% include entry.html item=item %}{% endfor %}
     </ul>
 
     <h3>Publications</h3>
-    <ul>
-      <li>
-        <b>A. Dhamrait</b>, D. Lee. <i>Automatic shock capturing with GP uncertainty quantification</i><br \>
-        in-progress
-      </li> 
-      <li>
-        <b>A. Dhamrait</b>, E. Zoni, A. Huebl, R. Roussel, J. Kaiser, J.-L. Vay, R. Lehe <i>The memory scaling of reverse-mode differentiability in particle accelerator tracking codes with space charge</i><br \>
-        in-progress
-      </li>
+    <ul class="entries">
+      {% for item in site.data.publications %}{% include publication.html item=item %}{% endfor %}
     </ul>
 
+    <h3>Posters</h3>
+    <ul class="entries">
+      {% for item in site.data.posters %}{% include publication.html item=item %}{% endfor %}
+    </ul>
 
     <h3>Industry Experience</h3>
-    <ul>
-      <li>
-        <b>Meta</b> July 2022 - January 2023<br \>
-        Software Engineer<br \>
-        Worked as a Software Engineer on a large, cross-functional team. Implemented features on a large internal react app to aid and assist sales, marketing, and business clients within Meta.
-      </li>
-      <li>
-        <b>Apple</b> June 2021 - June 2022<br \>
-        Software Engineer<br \>
-        Served as the engineering point of contact of multiple large projects related to user-level OS features. Created and maintained a large cross-functional Swift utilities framework for use across Apple. Implemented features and fixed bugs in complex projects written in C/C++, Obj-C, and Swift.
-      </li>
-      <li>
-        <b>Apple</b> June 2020 - August 2020<br \>
-          Software Engineer Intern<br \>
-          Migrated an existing cloud service onto Kubernetes. Created and maintained a CI/CD pipeline. Wrote a server implementing a new service API and deployed for internal use.
-      </li>
+    <ul class="entries">
+      {% for item in site.data.experience %}{% include entry.html item=item %}{% endfor %}
     </ul>
 
     <h3>Projects</h3>
-    <ul>
-      <li>
-        <b>Auto-Regressive Conditional Generative Model</b> <br \>
-        Implemented a generative model for multi-channel weather data using a conditional decoder. Modeled weather data using a variety of techniques, models, and architectures. Small model size enabled training for models accurate to 2 weeks in less than 5 minutes of training time and 30 seconds of prediction time.<br \>
-        <a href="project_reports/AM160_Final_Project.pdf">Report</a>
-        <a href="https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_P2.ipynb">Code</a>
-      </li>
-      <li>
-        <b>Fortran Linear Algebra Library</b><br \>
-        Implemented many fast linear algebra routines for matrix decomposition, singular value decomposition, eigenvalue problems, and other matrix operations. <br \>
-        <a href="https://github.com/adhamrait/Numerical-Linear-Algebra/">Code</a>
-
-      </li>
-      <li> 
-        <b>De-sparsification via Variational Auto Encoder</b> <br \>
-        Implemented a desparsification model for multi-channel weather data using a VAE. Explored different models, hyperparameters, and architectures. <br \>
-        <a href="project_reports/AM160_Final_Project.pdf">Report</a>
-        <a href="https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_P1.ipynb">Code</a>
-      </li>
-      <li>
-        <b>Modeling High-Dimensional Lorenz-93</b> <br \>
-        Used neural nets to model a high dimensional Lorenz-93 system. Explored different methods of iterating steps of the model. Explored various implementations of a hybrid physics + ML model when modeling systems which have known physics.<br \>
-        <a href="project_reports/AM160_HW2_Problem1.pdf">Report</a>
-        <a href="https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_HW2_Problem_1.ipynb">Code</a>
-      </li>
-      <li>
-        <b>SinDY for Lorenz-63</b><br \>
-         Used SinDY to extract the physics of the Lorenz-63 system with noisy exact derivative data and computed derivative data. Compared multiple methods of computing derivative from data, including finite difference methods, gaussian processes, and cubic splines.<br \>
-        <a href="project_reports/AM160_HW1_Problem2.pdf">Report</a>
-        <a href="https://github.com/adhamrait/uncategorized_projects/blob/main/AM160_HW1_Problem2.ipynb">Code</a>
-      </li>
-      <li>
-        <b>Optimal Gaussian Process Kernel Choice</b><br \>
-         Used gradient descent to choose the optimal kernel function for a Gaussian Process. When approximating a sinusoidal function, The optimized kernel function weights obtained from maximizing the log-likelihood of the Gaussian Process correctly weighed the periodic kernel function considerably more than the other kernel functions. This choice of kernel function additionally allowed the model to predict unseen data very accurately<br \>
-        <a href="project_reports/AM229_Project_Report.pdf">Report</a>
-        <a href="https://github.com/adhamrait/uncategorized_projects/blob/main/AM229_Final_Project.ipynb">Code</a>
-      </li>
-      <li>
-        <b>Novel distributed large matrix inversion techniques</b> <br \>
-        Implemented multiple novel matrix inversion algorithms for large, multi-gigabyte matrices on distributed computers in the python package nums. Analyzed performance characteristics of different implementations onvarying matrix sizes.<br \>
-        <a href="project_reports/CS267_Final_Project_Report.pdf">Report</a>
-        <a href="https://github.com/adhamrait/nums">Code</a>
-      </li>
-      <li>
-        <b>Calchart-4</b> <br \>
-        A typescript webapp for charting marching band shows<br \>
-        <a href="https://github.com/calband/calchart-redesign">Code</a>
-      </li>
+    <ul class="entries">
+      {% for item in site.data.projects %}{% include entry.html item=item %}{% endfor %}
     </ul>
-  </Body>
+  </body>
 </html>
