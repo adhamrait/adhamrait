@@ -6,6 +6,10 @@
     - { label: PDF, url: publications/arjun_dhamrait_thesis.pdf }
     - { label: Presentation, url: publications/arjun_dhamrait_thesis_presentation.pdf }
 
-- authors: [A. Dhamrait, E. Zoni, A. Huebl, R. Roussel, J. Kaiser, J.-L. Vay, R. Lehe]
-  title: The memory scaling of reverse-mode differentiability in particle accelerator tracking codes with space charge
-  status: in-progress
+- authors: [A. Dhamrait, E. Zoni, A. Huebl, J. Qiang, C. E. Mitchell, R. Roussel, J. Kaiser, C. Xu, J.-L. Vay, R. Lehe]
+  title: The memory scaling of reverse-mode differentiation in particle accelerator simulations with space charge
+  status: "PASC '26: Platform for Advanced Scientific Computing Conference, Bern, Switzerland, 2026"
+  links:
+    - { label: PDF, url: publications/dhamrait_pasc26_memory_scaling.pdf }
+    - { label: arXiv, url: "https://arxiv.org/abs/2605.27282" }
+    - { label: ACM, url: "https://doi.org/10.1145/3815572.3815749" }
